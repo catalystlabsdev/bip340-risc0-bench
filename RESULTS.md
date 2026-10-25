@@ -158,3 +158,15 @@ Observations:
 
 ## Results 4 — real proving, stock k256 guest (comparison)
 
+## Results 4 — real proving, stock crates.io `k256 0.13.4` (no precompiles)
+
+Run on 25 October 2026 on the same machine and toolchain, `RISC0_DEV_MODE=0`:
+
+```text
+RESULT variant=stock M=1 receipt_kind=Composite(6 segments) total_cycles=5767168 user_cycles=5428119 segments=6 prove_wall_s=576.54 verify_wall_s=0.072 receipt_bytes=1674764
+      576.62 real      4932.53 user        45.99 sys
+          7907180544  maximum resident set size
+```
+
+One stock verification proves in 576.5 s against 48.4 s with the accelerated crate (about 12×),
+with a 1.67 MB receipt against 268 kB. Log: `logs/22_prove_stock_M1.log`.

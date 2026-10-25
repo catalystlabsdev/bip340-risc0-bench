@@ -26,8 +26,8 @@ Succinct receipt, M = 5: 262.7 s, 8.5 GB, 223 kB.
   fits under LEZ's 10M execution-gas cap per public transaction.
 - Stock `k256` costs 5.4M cycles per verification, so M = 2 does not fit at all.
 - Receipts are composite (one segment per ~1M cycles) unless stated.
-- Stock-crate figures are executor cycle counts only; a stock-crate proving run was
-  started but not completed, and is not reported.
+- Stock `k256`, M = 1, real proof: 576.5 s, 7.9 GB, 1.67 MB composite receipt (six segments),
+  about 12 times slower than the accelerated crate's 48.4 s for the same check.
 
 Full method, exact versions and caveats: [RESULTS.md](RESULTS.md). Raw logs: [logs/](logs/)
 (local filesystem paths in the logs are replaced with `<repo>` and `<home>`; nothing else is edited).
