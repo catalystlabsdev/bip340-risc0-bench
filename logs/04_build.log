@@ -1,0 +1,47 @@
+   Compiling methods v0.1.0 (<repo>/methods)
+   Compiling host v0.1.0 (<repo>/host)
+error[E0615]: attempted to take value of method `cycles` on type `SessionInfo`
+  --> host/src/main.rs:58:32
+   |
+58 |                     m, session.cycles, session.user_cycles, session.paging_cycles,
+   |                                ^^^^^^ method, not a field
+   |
+help: use parentheses to call the method
+   |
+58 |                     m, session.cycles(), session.user_cycles, session.paging_cycles,
+   |                                      ++
+
+error[E0609]: no field `user_cycles` on type `SessionInfo`
+  --> host/src/main.rs:58:48
+   |
+58 |                     m, session.cycles, session.user_cycles, session.paging_cycles,
+   |                                                ^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `segments`, `journal`, `exit_code`, `receipt_claim`
+
+error[E0609]: no field `paging_cycles` on type `SessionInfo`
+  --> host/src/main.rs:58:69
+   |
+58 |                     m, session.cycles, session.user_cycles, session.paging_cycles,
+   |                                                                     ^^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `segments`, `journal`, `exit_code`, `receipt_claim`
+
+error[E0609]: no field `reserved_cycles` on type `SessionInfo`
+  --> host/src/main.rs:59:29
+   |
+59 |                     session.reserved_cycles, session.segments.len(), wall
+   |                             ^^^^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `segments`, `journal`, `exit_code`, `receipt_claim`
+
+Some errors have detailed explanations: E0609, E0615.
+For more information about an error, try `rustc --explain E0609`.
+error: could not compile `host` (bin "host") due to 4 previous errors
+cargo build --release  101.82s user 12.71s system 196% cpu 58.391 total
+   Compiling methods v0.1.0 (<repo>/methods)
+   Compiling host v0.1.0 (<repo>/host)
+    Finished `release` profile [optimized + debuginfo] target(s) in 32.85s
+warning: the following packages contain code that will be rejected by a future version of Rust: block v0.1.6
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+cargo build --release  30.57s user 1.13s system 96% cpu 32.909 total

@@ -1,0 +1,41 @@
+variant=accel M=5 opts=Composite RISC0_DEV_MODE=Ok("0")
+[2m2026-10-23T17:30:58.876205Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::exec::executor[0m[2m:[0m execution time: 38.702708ms
+[2m2026-10-23T17:30:58.876227Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m number of segments: 2
+[2m2026-10-23T17:30:58.876232Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 2097152 total cycles
+[2m2026-10-23T17:30:58.876236Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 1493826 user cycles (71.23%)
+[2m2026-10-23T17:30:58.876240Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 69072 paging cycles (3.29%)
+[2m2026-10-23T17:30:58.876243Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 534254 reserved cycles (25.48%)
+[2m2026-10-23T17:30:58.876246Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m ecalls
+[2m2026-10-23T17:30:58.876249Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 	9254 BigInt calls, 690080 cycles, (32.91%)
+[2m2026-10-23T17:30:58.876252Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 	1034 Read calls, 3099 cycles, (0.15%)
+[2m2026-10-23T17:30:58.876254Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 	4 Sha2 calls, 296 cycles, (0.01%)
+[2m2026-10-23T17:30:58.876256Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 	1 Terminate calls, 2 cycles, (0.00%)
+[2m2026-10-23T17:30:58.876258Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 	0 Write calls, 0 cycles, (0.00%)
+[2m2026-10-23T17:30:58.876260Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 	0 User calls, 0 cycles, (0.00%)
+[2m2026-10-23T17:30:58.876262Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 	0 Poseidon2 calls, 0 cycles, (0.00%)
+[2m2026-10-23T17:30:58.876264Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m syscalls
+[2m2026-10-23T17:30:58.876266Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 	514 Read calls
+[2m2026-10-23T17:30:58.876269Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 	1 Write calls
+[2m2026-10-23T17:30:58.876271Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 	0 VerifyIntegrity2 calls
+[2m2026-10-23T17:30:58.876272Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 	0 VerifyIntegrity calls
+[2m2026-10-23T17:30:58.876274Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 	0 ProveKeccak calls
+[2m2026-10-23T17:30:58.876276Z[0m [32m INFO[0m [2mrisc0_zkvm::host::server::session[0m[2m:[0m 	0 Keccak calls
+RESULT variant=accel M=5 receipt_kind=Composite(2 segments) total_cycles=2097152 user_cycles=1493826 segments=2 prove_wall_s=206.05 verify_wall_s=0.024 receipt_bytes=562756
+      206.07 real      1805.51 user        16.17 sys
+          7687159808  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             2904580  page reclaims
+                   2  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   6  messages sent
+                  24  messages received
+                   0  signals received
+                  35  voluntary context switches
+             1760634  involuntary context switches
+           689435522  instructions retired
+           210345782  cycles elapsed
+             4047184  peak memory footprint

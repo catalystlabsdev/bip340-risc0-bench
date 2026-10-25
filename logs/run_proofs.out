@@ -1,0 +1,21 @@
+=== START prove accel M=5 Fri Oct 23 23:00:58 IST 2026
+=== END M=5 rc=0 Fri Oct 23 23:04:24 IST 2026
+RESULT variant=accel M=5 receipt_kind=Composite(2 segments) total_cycles=2097152 user_cycles=1493826 segments=2 prove_wall_s=206.05 verify_wall_s=0.024 receipt_bytes=562756
+      206.07 real      1805.51 user        16.17 sys
+          7687159808  maximum resident set size
+=== START prove accel M=10 Fri Oct 23 23:04:24 IST 2026
+=== END M=10 rc=0 Fri Oct 23 23:10:03 IST 2026
+RESULT variant=accel M=10 receipt_kind=Composite(4 segments) total_cycles=3178496 user_cycles=2974267 segments=4 prove_wall_s=338.58 verify_wall_s=0.044 receipt_bytes=1053512
+      338.62 real      3020.51 user        19.67 sys
+          7935361024  maximum resident set size
+=== START prove accel M=16 Fri Oct 23 23:10:03 IST 2026
+=== END M=16 rc=0 Fri Oct 23 23:19:50 IST 2026
+RESULT variant=accel M=16 receipt_kind=Composite(5 segments) total_cycles=5242880 user_cycles=4763726 segments=5 prove_wall_s=586.67 verify_wall_s=0.060 receipt_bytes=1406698
+      586.72 real      5285.42 user        30.93 sys
+          8676130816  maximum resident set size
+=== START prove-succinct accel M=5 Fri Oct 23 23:19:50 IST 2026
+=== END succinct rc=0 Fri Oct 23 23:24:12 IST 2026
+RESULT variant=accel M=5 receipt_kind=Succinct total_cycles=2097152 user_cycles=1501768 segments=2 prove_wall_s=262.71 verify_wall_s=0.013 receipt_bytes=223234
+      262.72 real      2400.45 user        10.94 sys
+          8536391680  maximum resident set size
+ALLDONE
