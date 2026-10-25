@@ -119,7 +119,7 @@ The host binary and all sources are in this folder; raw logs are in `logs/` (`10
 | 16 | 4,754,287 | 297,143 | 5,242,880 | 5 (20 x5) | 0.13 |
 | 32 | 9,512,524 | 297,266 | 10,485,760 | 10 (20 x10) | 0.23 |
 
-Linear fit: ~**295.7k user cycles per BIP-340 verification** + ~10k fixed overhead (slope from M=1 to M=32: (9,512,524 - 306,497)/31 = 296,969). From the `RISC0_INFO` breakdown (prove logs), ~43% of user cycles for M>=10 are inside the `BigInt` (bigint2 modular-arithmetic) precompile: M=16 -> 29,616 BigInt ecalls, 2,209,118 cycles (1,851 ecalls per verification).
+Linear fit: ~**297k user cycles per BIP-340 verification** + ~8–10k fixed overhead (two-point slope M=1→32: (9,512,524 − 306,497)/31 = 296,969; least-squares over all seven points: 296,957 per signature, intercept 8,185). From the `RISC0_INFO` breakdown (prove logs), the `BigInt` (bigint2 modular-arithmetic) precompile accounts for ~42–43% of **total** cycles for M>=10 (≈46% of user cycles): M=10 -> 18,480 BigInt ecalls, 1,376,316 cycles (43.30% of total); M=16 -> 29,616 ecalls, 2,209,118 cycles (42.14% of total), i.e. 1,851 ecalls per verification.
 
 ## Results 2 — executor only, stock crates.io `k256 0.13.4` (no precompiles)
 
@@ -155,8 +155,6 @@ Observations:
 - Composite receipt size grows ~linearly with segment count (~270 KB per segment). The succinct receipt is a constant ~218 KB regardless of M and cost +57 s of recursion (2 lifts + 1 join, on CPU) over the composite proof for M=5.
 - `Sha2` ecalls stay at 4 for every M, so the BIP-340 tagged challenge hash does not appear to go through the SHA-256 precompile in this configuration (it is a few thousand software cycles per signature; immaterial next to the EC math). Not investigated further.
 - The `reserved_cycles` column (zkVM-internal overhead) is noisy between runs because segment boundaries move with the random inputs.
-
-## Results 4 — real proving, stock k256 guest (comparison)
 
 ## Results 4 — real proving, stock crates.io `k256 0.13.4` (no precompiles)
 

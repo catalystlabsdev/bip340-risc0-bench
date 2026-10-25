@@ -22,7 +22,7 @@ privacy-preserving transaction; that is measured in the grant's first milestone.
 
 Succinct receipt, M = 5: 262.7 s, 8.5 GB, 223 kB.
 
-- About 298k cycles per approval with the accelerated crate, linear in M. M = 32 still
+- About 297k cycles per approval with the accelerated crate, linear in M. M = 32 still
   fits under LEZ's 10M execution-gas cap per public transaction.
 - Stock `k256` costs 5.4M cycles per verification, so M = 2 does not fit at all.
 - Receipts are composite (one segment per ~1M cycles) unless stated.
